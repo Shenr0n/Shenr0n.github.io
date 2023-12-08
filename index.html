@@ -20,12 +20,15 @@
           <h2 class="subtitle">
             <span id="colored-text">Software Engineer</span>.
           </h2>
-          <div class="tabs is-centered">
+          <div class="tabs is-pulled-right">
             <ul>
               <li class="is-active"><a href="#about">About</a></li>
               <li><a href="#projects">Projects</a></li>
               <li><a href="#education">Education</a></li>
             </ul>
+          </div>
+          <div class="buttons is-centered">
+            <button class="button is-primary" onclick="viewResume()">Resume</button>
           </div>
           
         </div>
@@ -48,6 +51,11 @@
         </div>
       </div>
         <br>
-    </section>    
+    </section>
+    <script>
+      function viewResume() {
+        window.open('assets/files/resume.pdf', '_blank');
+      }
+    </script>
   </body>
 </html>
