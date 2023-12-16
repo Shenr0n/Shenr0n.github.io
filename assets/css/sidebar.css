@@ -1,0 +1,56 @@
+.container {
+    display: flex;
+}
+
+.sidebar {
+    width: 20%;
+    background-color: #333;
+    color: white;
+    padding: 20px;
+    position: fixed;
+    height: 100%;
+    overflow: auto;
+    text-align: center;
+}
+
+.sidebar img {
+    width: 100%;
+    border-radius: 50%;
+}
+
+.sidebar ul {
+    list-style: none;
+    padding: 0;
+}
+
+.sidebar li {
+    cursor: pointer;
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+.sidebar button {
+    background-color: #4CAF50;
+    color: white;
+    padding: 20px;
+    font-size: 18px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.sidebar button:hover {
+    background-color: #45a049;
+    transform: scale(1.1); 
+}
+
+.sidebar li:hover {
+    color: #4CAF50;
+}
+
+.container::after {
+    content: "";
+    display: table;
+    clear: both;
+}
