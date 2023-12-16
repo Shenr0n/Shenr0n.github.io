@@ -1,5 +1,5 @@
 .projects {
-
+   padding: 20px;
 }
         
 .project-card {
@@ -8,10 +8,11 @@
     margin: 8px; 
     padding: 8px;
     border: 1px solid #ddd;
+    box-sizing: border-box;
     border-radius: 8px;
     cursor: pointer;
     transition: transform 0.3s;
-    box-sizing: border-box;
+    
     display: inline-block;
     overflow: hidden; /* Hide overflow to contain the image */
 }
@@ -31,10 +32,6 @@
 
 .project-card:hover {
     transform: scale(1.05);
-}
-
-.project-card h3 {
-    margin-top: 0;
 }
 
 .project-card p {
