@@ -1,126 +1,262 @@
+
 <!DOCTYPE html>
 <html lang="en">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="assets/css/styles.css">
     <title>Siddhesh's Portfolio</title>
+    <link rel="stylesheet" href="assets/css/styles.css">
+    <link rel="stylesheet" href="assets/css/color-1.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 </head>
 
 <body>
-    <div class="container">
-            <nav class="sidebar">
-                <img src="assets/img/profile.jpeg" alt="Siddhesh Shinde - Software Engineer">
-                <h1>Siddhesh Shinde</h1>
-                <p>Software Engineer | Backend Developer</p>
-                <button onclick="openResume()" title="View Resume">Resume</button>
-                <ul>
-                    <li onclick="showContent('about')">About</li>
-                    <li onclick="showContent('skills')">Technical Skills</li>
-                    <li onclick="showContent('projects')">Projects</li>
-                    <li onclick="showContent('experience')">Experience</li>
-                    <li onclick="showContent('education')">Education</li>
-                    <li onclick="showContent('contact')">Contact Me</li>
-                </ul>
-            </nav>
-            <div class="content" id="about">
-                <h1>Hello, I'm Siddhesh Shinde!</h1><br>
-                <p>My interests lie in Software development, and I have experience in developing backend for web
-                    applications,
-                    <br>including designing REST APIs and Web APIs, working with SQL and NoSQL databases, and
-                    implementing
-                    connectivity. <br>
-                    <br>I’m skilled in Object Relational Mapping, building microservices, creating Data Transfer and
-                    Access
-                    Objects, <br>
-                    and employing MVC (Model-View-Controller) architecture. <br>
-                    <br>Through my experience, I've become confident in coding, algorithm design, coding best practices,
-                    <br>
-                    and object-oriented programming. I’m adept at learning and adapting to new technologies.<br>
-                </p>
-
-                <br>
-                <h3>Links</h3><br>
-                <a href="https://github.com/Shenr0n">
-                    <img src="assets/img/github-mark.png" alt="My Github Link"
-                        style="width: 50px; height:50px; border: 1px; padding-right: 30px;"></a>
-
-                <a href="https://www.linkedin.com/in/siddheshshinde314">
-                    <img src="assets/img/linkedin_icon.png" alt="My Linkedin Profile"
-                        style="width: 50px; height:50px; border: 1px;"> </a>
-
+    <!-- Main Container -->
+    <div class="main-container">
+        <!-- Aside for nav -->
+        <div class="aside">
+            <div class="logo">
+                <a href="#"><span>Siddhesh</span></a>
             </div>
-            <div class="content" id="skills">
-                <h2>Technical Skills</h2>
-                <p>
-                    Languages: Python, Java, SQL, JavaScript, Go, C, GraphQL, HTML, CSS <br>
-                    Databases and Cloud: MySQL, MongoDB, PostgreSQL, SQLite, AWS, Docker, Kubernetes <br>
-                    Frameworks: Spring Boot, Django Hibernate, Hadoop, Spark, JUnit, Bootstrap, JavaFX, MUI, Tailwind
-                    <br>
-                    Tools: Git, Maven, JIRA, Apache, Postman, Thymeleaf, Firebase, Anaconda <br>
-                    Other Skills: REST APIs, Java Persistence API, React.js, Microservices, JDBC, JWT, Spring Web and
-                    Security, NumPy, Pandas <br>
-                    Certifications: Intro to Quantum Computing with IBM Quantum, Java Masterclass, SQL Bootcamp, Python
-                    Masterclass <br>
-                </p>
+            <div class="nav-toggler">
+                <span>
+
+                </span>
             </div>
-            <div class="content" id="projects">
-                <h2>Projects</h2>
-                    <div class="project-card"
-                        onclick='openProject("project1", "https://github.com/Shenr0n/chirp-microblogging")'>
-                        <img src="assets/img/chirp.jpg" alt="Project 1 Image">
-                        <div class="project-info">
-                            <h3>Microblogging Social Media Web Application</h3>
-                            <p></p>
-                        </div>
-                    </div>
-
-                    <div class="project-card"
-                        onclick='openProject("project2", "https://github.com/Shenr0n/quantum-error-correction-sho95")'>
-                        <img src="assets/img/shor.jpg" alt="">
-                        <div class="project-info">
-                            <h3>Quantum Error Correction</h3>
-                            <p></p>
-                        </div>
-                    </div>
-
-                    <div class="project-card"
-                        onclick='openProject("project3", "https://github.com/Shenr0n/impact-of-us-elections-on-social-media")'>
-                        <img src="assets/img/reddit.jpg" alt="">
-                        <div class="project-info">
-                            <h3>Impact of 2022 US Elections on social media</h3>
-                            <p></p>
-                        </div>
-                    </div>
-
-                    <div class="project-card"
-                    onclick='openProject("project4", "https://github.com/Shenr0n/spring-employees-crud")'>
-                    <img src="assets/img/employee.jpg" alt="">
-                    <div class="project-info">
-                        <h3>Employee Management Web Application</h3>
-                        <p></p>
-                    </div>
-                </div>
-                <div class="project-card"
-                    onclick='openProject("project5", "https://github.com/Shenr0n/cheminformatics-molecules")'>
-                    <img src="assets/img/chem.jpg" alt="">
-                    <div class="project-info">
-                        <h3>Cheminformatics of Molecules</h3>
-                        <p></p>
-                    </div>
-                </div>
-            </div>
-            <div class="content" id="experience">
-
-            </div>
-            <div class="content" id="education">
-
-            </div>
-            <div class="content" id="contact">
-
-            </div>
+            <ul class="nav">
+                <li><a href="#" class="active"><i class="fa fa-home"></i> Home</a></li>
+                <li><a href="#"><i class="fa fa-user"></i> About</a></li>
+                <li><a href="#"><i class="fa fa-list"></i> Skills</a></li>
+                <li><a href="#"><i class="fa fa-briefcase"></i> Projects</a></li>
+                <li><a href="#"><i class="fa fa-comments"></i> Contact</a></li>
+            </ul>
         </div>
+        <!-- Aside end -->
+        <!-- main content start -->
+        <div class="main-content">
+            <!-- Home start -->
+            <!-- <section class="home section"> -->
+            <section class="home section">
+                <div class="container">
+                    <div class="row">
+                        <div class="home-info padd-15">
+                            <h3 class="hello">Hello, my name is <span class="name">Siddhesh Shinde</span></h3>
+                            <h3 class="my-profession">I'm a <span class="typing">Software Engineer</span></h3>
+                            <p>My expertise is in Web development, Data analytics and Machine Learning</p>
+                            <div class="home-buttons">
+                                <a href="assets/resume.pdf" target="_blank" class="btn">Resume/CV</a>
+                                <a href="https://www.linkedin.com/in/siddheshshinde314" target="_blank"
+                                    class="btn">Linkedin</a>
+                                <a href="https://github.com/Shenr0n" target="_blank" class="btn">Github</a>
+                            </div>
+                        </div>
+                        <div class="home-img padd-15">
+                            <img src="assets/img/profile.jpeg" alt="Profile Picture">
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!-- Home end -->
+            <!-- about start -->
+            <section class="about section">
+                <div class="container">
+                    <div class="row">
+                        <div class="section-title padd-15">
+                            <h2>About</h2>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="about-content padd-15">
+                            <div class="row">
+                                <div class="about-text padd-15">
+                                    <p> I have experience in designing REST APIs and Web APIs, working with SQL and NoSQL databases, and implementing connectivity.<br>
+                                        Skilled in Object Relational Mapping, building microservices, creating Data Transfer and Access Objects,
+                                        and employing MVC (Model-View-Controller) architecture.</p>
+                                    </div>
+                            </div>
+                            <div class="row">
+                                <div class="education padd-15">
+                                    <h3 class="title">Education</h3>
+                                    <div class="row">
+                                        <div class="timeline-box padd-15">
+                                            <div class="timeline shadow-dark">
+                                                <!-- Education timeline -->
+                                                <div class="timeline-item">
+                                                    <div class="circle-dot"></div>
+                                                    <h3 class="timeline-date">
+                                                        <i class="fa fa-calender"></i> 2021 - 2023
+                                                    </h3>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="experience padd-15">
+                                    <h3 class="title">Experience</h3>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!-- about end -->
+
+            <!-- Skills start -->
+            <section class="techskills section">
+                <div class="container">
+                    <div class="row">
+                        <div class="section-title padd-15">
+                            <h2>Technical Skills</h2>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="techskills-content padd-15">
+                            <div class="row">
+                                <div class="techskills-text padd-15">
+                                    <h3>My Technical Skills in <span>Software Engineering</span></h3>
+                                    <p>Lorem Ipsum paragraph</p>
+                                </div>
+                            </div>
+                            <div class="row">
+
+                                <!-- skills1 -->
+                                <div class="skills1 padd-15">
+                                    
+                                    <div class="row">
+                                        <h3>Languages</h3>
+                                        <div class="skill-item padd-15">
+                                            <h5>Python</h5>
+                                            <div class="progress">
+                                                <div class="progress-in" style="width: 99%;"></div>
+                                            </div>
+                                        </div>
+                                        <div class="skill-item padd-15">
+                                            <h5>Java</h5>
+                                            <div class="progress">
+                                                <div class="progress-in" style="width: 85%;"></div>
+                                            </div>
+                                        </div>
+                                        <div class="skill-item padd-15">
+                                            <h5>Go</h5>
+                                            <div class="progress">
+                                                <div class="progress-in" style="width: 75%;"></div>
+                                            </div>
+                                        </div>
+                                        <div class="skill-item padd-15">
+                                            <h5>SQL</h5>
+                                            <div class="progress">
+                                                <div class="progress-in" style="width: 70%;"></div>
+                                            </div>
+                                        </div>
+                                        <div class="skill-item padd-15">
+                                            <h5>JavaScript and HTML5/CSS</h5>
+                                            <div class="progress">
+                                                <div class="progress-in" style="width: 70%;"></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!--skills1 end -->
+
+                                <!-- skills2 start-->
+                                <div class="skills2 padd-15">
+                                    
+                                    <div class="row">
+                                        <h3>Databases and Cloud</h3>
+                                        <div class="skill-item padd-15">
+                                            <h5>MySQL</h5>
+                                                <div class="progress">
+                                                    <div class="progress-in" style="width: 85%;"></div>
+                                                </div>
+                                        </div>
+                                        <div class="skill-item padd-15">
+                                            <h5>PostgreSQL</h5>
+                                            <div class="progress">
+                                                <div class="progress-in" style="width: 85%;"></div>
+                                            </div>
+                                        </div>
+                                        <div class="skill-item padd-15">
+                                            <h5>MongoDB</h5>
+                                            <div class="progress">
+                                                <div class="progress-in" style="width: 85%;"></div>
+                                            </div>
+                                        </div>
+                                        <div class="skill-item padd-15">
+                                            <h5>AWS (EC2, RDS, S3, Lambda)</h5>
+                                            <div class="progress">
+                                                <div class="progress-in" style="width: 70%;"></div>
+                                            </div>
+                                        </div>
+                                        <div class="skill-item padd-15">
+                                            <h5>Docker</h5>
+                                            <div class="progress">
+                                                <div class="progress-in" style="width: 70%;"></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!--skills2 end-->
+
+                                <!--skills3 start-->
+                                <div class="skills3 padd-15">
+                                    
+                                    <div class="row">
+                                        <h3>Backend</h3>
+                                        <div class="skill-item padd-15">
+                                            <h5>Spring Boot</h5>
+                                            <div class="progress">
+                                                <div class="progress-in" style="width: 99%;"></div>
+                                            </div>
+                                        </div>
+                                        <div class="skill-item padd-15">
+                                            <h5>Django</h5>
+                                            <div class="progress">
+                                                <div class="progress-in" style="width: 85%;"></div>
+                                            </div>
+                                        </div>
+                                        <div class="skill-item padd-15">
+                                            <h5>REST and Web APIs</h5>
+                                            <div class="progress">
+                                                <div class="progress-in" style="width: 70%;"></div>
+                                            </div>
+                                        </div>
+                                        <div class="skill-item padd-15">
+                                            <h5>Object Relational Mapping and MVC</h5>
+                                            <div class="progress">
+                                                <div class="progress-in" style="width: 70%;"></div>
+                                            </div>
+                                        </div>
+                                        <div class="skill-item padd-15">
+                                            <h5>Security and Authentication</h5>
+                                            <div class="progress">
+                                                <div class="progress-in" style="width: 70%;"></div>
+                                            </div>
+                                        </div>
+                                        <div class="skill-item padd-15">
+                                            <h5>Web Servers</h5>
+                                            <div class="progress">
+                                                <div class="progress-in" style="width: 70%;"></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            <!--skills3 end-->
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!-- Skills end -->
+
+        </div>
+        <!-- main content end -->
+
+    </div>
+
+    <!-- Main end -->
 
     <script src="assets/scripts/script.js"></script>
 </body>
