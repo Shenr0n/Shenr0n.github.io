@@ -1,6 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700');
 @import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400..900&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,400;0,700;1,700;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700;900&display=swap');
 :root {
     --bg-black-900:#f2f2fc;
     --bg-black-100:#fdf9ff;
@@ -185,6 +185,7 @@ ul{
     display: none;
     align-items: center;
     justify-content: center;
+    transition: all 0.3s ease;
 }
 .aside .nav-toggler span{
     height: 2px;
@@ -192,6 +193,9 @@ ul{
     background: var(--skin-color);
     display: inline-block;
     position: relative;
+}
+.aside .nav-toggler.open span{
+    background-color: transparent;
 }
 .aside .nav-toggler span::before{
     content: '';
@@ -202,6 +206,10 @@ ul{
     top: -6px;
     left: 0;
 }
+.aside .nav-toggler.open span::before{
+    transform: rotate(45deg);
+    top: 0;
+}
 .aside .nav-toggler span::after{
     content: '';
     height: 2px;
@@ -210,6 +218,10 @@ ul{
     position: absolute;
     top: 6px;
     left: 0;
+}
+.aside .nav-toggler.open span::after{
+    transform: rotate(-45deg);
+    top: 0;
 }
 .aside .nav{
     margin-top: 50px;
@@ -680,6 +692,22 @@ h3.my-profession{
     .aside{
         left: -270px;
     }
+    .aside.open{
+        left: 0;
+    }
+    .aside .nav-toggler{
+        display: flex;
+        left: 30px;
+    }
+    .aside .nav-toggler.open{
+        left: 300px;
+    }
+    .section{
+        left: 0;
+    }
+    .section.open{
+        left:270px;
+    }
     .main-content{
         padding-left: 0;
     }
@@ -706,6 +734,7 @@ h3.my-profession{
         text-align: center;
         position: relative;
     }
+    /*
     .home-img::after{
         content: '';
         position: absolute;
@@ -725,7 +754,7 @@ h3.my-profession{
         border-left: 10px solid var(--skin-color);
         left: 80px;
         top: -40px;
-    }
+    }*/
     .home .home-img img{
         margin: auto;
         height: 400px;
@@ -738,6 +767,12 @@ h3.my-profession{
         flex: 0 0 50%;
         max-width: 50%;        
     }
+    .expertise .expertise-item,
+    .project .project-item,
+    .contact .contact-form .col-6{
+        flex: 0 0 100%;
+        max-width: 100%;        
+    }
 }
 @media (max-width:800px){
     .about .about-content .education,
@@ -746,8 +781,8 @@ h3.my-profession{
     max-width: 100%;
     }
     .contact .contact-info-item{
-        flex: 0 0 50%;
-        max-width: 50%;
+        flex: 0 0 100%;
+        max-width: 100%;
         text-align: center;
         margin-bottom: 15px;
     }
@@ -755,18 +790,12 @@ h3.my-profession{
 @media (max-width:650px){
     .techskills .techskills-content .skills1,
     .techskills .techskills-content .skills2,
-    .techskills .techskills-content .skills3
+    .techskills .techskills-content .skills3,
     .expertise .expertise-item,
     .project .project-item,
     .contact .contact-form .col-6{
         flex: 0 0 100%;
         max-width: 100%;        
-    }
-    .contact .contact-info-item{
-        flex: 0 0 100%;
-        max-width: 100%;
-        text-align: center;
-        margin-bottom: 15px;
     }
     .home .home-img{
         display: flex;
@@ -777,6 +806,7 @@ h3.my-profession{
         text-align: center;
         position: relative;
     }
+    /*
     .home-img::after{
         content: '';
         position: absolute;
@@ -796,7 +826,7 @@ h3.my-profession{
         border-left: 10px solid var(--skin-color);
         left: 80px;
         top: -40px;
-    }
+    }*/
     .home .home-img img{
         margin: auto;
         height: 300px;
