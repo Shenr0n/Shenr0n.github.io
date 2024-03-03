@@ -1,17 +1,18 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700');
 @import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400..900&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,400;0,700;1,700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,400;0,700;1,700;900&display=swap');
 :root {
     --bg-black-900:#f2f2fc;
     --bg-black-100:#fdf9ff;
     --bg-black-50:#e8dfec;
+    --bg-black-10:#d0d0d0;
     --text-black-900:#302e4d;
     --text-black-700:#504e70;
 }
 body{
     line-height: 1.5;
     font-size: 16px;
-    font-family: 'Poppins' sans-serif;
+    font-family: 'Poppins';
 }
 *
 {
@@ -243,7 +244,7 @@ h3.hello{
 }
 h3.hello span{
     font-family: 'Merriweather';
-    font-size: 35px;
+    font-size: 40px;
     font-weight: 700;
     color: var(--skin-color);
 }
@@ -294,10 +295,12 @@ h3.my-profession{
 
 /* About section */
 .about .about-content{
+    font-family: 'Merriweather';
     flex: 0 0 100%;
     max-width: 100%;
 }
 .about .about-content .about-text{
+    
     flex: 0 0 100%;
     max-width: 100%;
 
@@ -313,7 +316,7 @@ h3.my-profession{
 
 }
 .about .about-content .about-text p{
-    font-size: 16px;
+    font-size: 18px;
     line-height: 25px;
     color: var(--text-black-700);
 }
@@ -323,7 +326,7 @@ h3.my-profession{
     max-width: 50%;
     margin-top: 30px;
 }
-.about .about-content h3 .title{
+.about .about-content .title{
     font-size: 24px;
     margin-bottom: 30px;
     font-weight: 700;
@@ -335,7 +338,7 @@ h3.my-profession{
 }
 .about .about-content .timeline{
     background-color: var(--bg-black-100);
-    padding: 30px 15px;
+    padding: 25px 15px;
     border: 1px solid var(--bg-black-50);
     border-radius: 10px;
     width: 100%;
@@ -351,7 +354,7 @@ h3.my-profession{
 }
 .about .about-content .timeline .timeline-item::before{
     content: '';
-    width: 1px;
+    width: 2px;
     position: absolute;
     height: 100%;
     left: 7px;
@@ -370,7 +373,7 @@ h3.my-profession{
 .about .about-content .timeline .timeline-date{
     font-weight: 400;
     font-size: 15px;
-    margin-bottom: 12px;
+    margin-bottom: 15px;
     color: var(--text-black-700);
 }
 .about .about-content .timeline .timeline-date .fa{
@@ -396,13 +399,14 @@ h3.my-profession{
     max-width: 100%;
 }
 .techskills .techskills-content .techskills-text{
+    font-family: 'Merriweather';
     flex: 0 0 100%;
     max-width: 100%;
 
 }
-.techskills .techskills-content .techskills-text h3{
+.techskills .techskills-content .techskills-text h3{ 
     font-size: 24px;
-    margin-bottom: 15px;
+    margin-bottom: 30px;
     font-weight: 700;
     color: var(--text-black-900);
 }
@@ -448,26 +452,29 @@ h3.my-profession{
 .techskills .techskills-content .skills1,
 .techskills .techskills-content .skills2,
 .techskills .techskills-content .skills3{
-    flex: 0 0 33%;
-    max-width: 33%;
+    font-family: 'Merriweather';
+    flex: 0 0 33.33%;
+    max-width: 33.33%;
     margin-top: 40px;
 }
 .techskills .techskills-content .skills1 .skill-item,
 .techskills .techskills-content .skills2 .skill-item,
 .techskills .techskills-content .skills3 .skill-item{
+    font-family: 'Poppins';
     flex: 0 0 100%;
     max-width: 100%;
 }
 .techskills .techskills-content .skills1 h3,
 .techskills .techskills-content .skills2 h3,
 .techskills .techskills-content .skills3 h3{
+    font-size: 21px;
     padding-left: 15px;
     padding-bottom: 15px;
 }
 .techskills .techskills-content .skills1 .skill-item h5,
 .techskills .techskills-content .skills2 .skill-item h5,
 .techskills .techskills-content .skills3 .skill-item h5{
-    line-height: 35px;
+    line-height: 25px;
     font-weight: 600;
     font-size: 16px;
     color: var(--text-black-900);
@@ -476,10 +483,10 @@ h3.my-profession{
 .techskills .techskills-content .skills1 .skill-item .progress,
 .techskills .techskills-content .skills2 .skill-item .progress,
 .techskills .techskills-content .skills3 .skill-item .progress{
-    background-color: var(--bg-black-50);
-    height: 5px;
+    background-color: var(--bg-black-10);
+    height: 2px;
     border-radius: 4px;
-    width: 90%;
+    width: 80%;
     position: relative;
 }
 .techskills .techskills-content .skills1 .skill-item,
@@ -497,3 +504,142 @@ h3.my-profession{
     border-radius: 4px;
     background-color: var(--skin-color);
 }
+.expertise .container{
+    padding-bottom: 40px;
+}
+.expertise .expertise-item{
+    margin-bottom: 30px;
+    flex: 0 0 50%;
+    max-width: 50%;
+}
+.expertise .expertise-item .expertise-item-inner{
+    background-color: var(--bg-black-100);
+    border: 1px solid var(--bg-black-50);
+    border-radius: 10px;
+    padding: 30px 15px;
+    text-align: center;
+    transition: all 0.3s ease;
+}
+.expertise .expertise-item .expertise-item-inner:hover{
+    box-shadow: 0 0 20px rgba(48, 46, 77, 0.15);
+}
+.expertise .expertise-item .expertise-item-inner .icon{
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+    display: block;
+    margin: 0 auto 30px;
+    text-align: center;
+    transition: all 0.3s ease;
+}
+.expertise .expertise-item .expertise-item-inner .icon .fa-solid{
+    font-size: 50px;
+    line-height: 50px;
+    color: var(--skin-color);
+    transition: all 0.3s ease;
+}
+.expertise .expertise-item .expertise-item-inner:hover .icon{
+    background: var(--skin-color);
+}
+.expertise .expertise-item .expertise-item-inner:hover .icon .fa-solid{
+    font-size: 25px;
+    color: #ffffff;
+}
+.expertise .expertise-item .expertise-item-inner h4{
+    font-size: 18px;
+    margin-bottom: 14px;
+    color: var(--text-black-900);
+    text-transform: capitalize;
+}
+.expertise .expertise-item .expertise-item-inner .expertise-item-inner-p{
+    font-family: 'Merriweather';
+    font-size: 15px;
+    color: var(--text-black-700);
+    line-height: 24px;
+    text-align: left;
+}
+
+/*Projects section*/
+.project .container{
+    padding-bottom: 40px;
+}
+.project .project-heading{
+    flex: 0 0 100%;
+    max-width: 100%;
+    margin-bottom: 40px;
+}
+.project .project-heading h2{
+    color: var(--text-black-900);
+    font-weight: 500;
+}
+.project .project-item{
+    flex: 0 0 33.33%;
+    max-width: 33.33%;
+    margin-bottom: 50px;
+}
+.project .project-item:hover{
+    transform: scale(1.05);
+    transition-duration: 0.4s;
+}
+.project .project-item-inner{
+    border: 6px solid var(--bg-black-100);
+    border-radius: 10px;
+    overflow: hidden;
+    cursor: pointer;
+}
+.project .project-item-inner .project-img img{
+    width: 100%;
+    display: block;
+}
+.project .project-item-inner .project-img .project-name{
+    font-family: "Merriweather";
+    font-weight:900;
+    font-size: 18px;
+    display: block;
+    padding-top: 15px;
+    padding-left: 15px;
+    padding-bottom: 15px;
+}
+.project .project-item-inner .project-img .project-info{
+    font-family: "Poppins";
+    flex-wrap: wrap;
+    display: block;
+}
+.project .project-item-inner .project-img .project-info img{
+    flex: 0 0 25%;
+    max-height: 100%;
+    display: block;
+    padding-left: 10px;
+    padding-bottom: 15px;
+}
+.project .project-item-inner .project-img .project-info ul{
+    display: flex;
+    flex-wrap: wrap;
+    list-style: none;
+    margin-bottom: 10px;
+}
+.project .project-item-inner .project-img .project-info ul li{
+    margin-right: 0.375rem; /* Adjust margin right as needed */
+    margin-top: 0.5rem;
+}
+.project .project-item-inner .project-img .project-info ul li .project-info-item{
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--skin-color);
+    border-radius: 5px;
+    padding: 3px 8px; 
+    font-size: 0.75rem; 
+    font-weight: 500; 
+    line-height: 1.25rem; 
+    color: #ffffff;
+}
+
+/*
+.project .project-item-inner .project-img .project-info span{
+    border-radius: 10%;
+    color: #ffffff;
+    padding: 5px;
+    margin: 5px;
+    background-color: var(--skin-color);
+}*/
