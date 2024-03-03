@@ -9,9 +9,18 @@
     <link rel="stylesheet" href="assets/css/styles.css">
     <link rel="stylesheet" href="assets/css/color-1.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    
+    <!-- switch theme -->
+    <link rel="stylesheet" href="assets/css/color-1.css" class="alternate-theme" title="color-1" disabled>
+    <link rel="stylesheet" href="assets/css/color-2.css" class="alternate-theme" title="color-2" disabled>
+    <link rel="stylesheet" href="assets/css/color-3.css" class="alternate-theme" title="color-3" disabled>
+    <link rel="stylesheet" href="assets/css/color-4.css" class="alternate-theme" title="color-4" disabled>
+    <link rel="stylesheet" href="assets/css/color-5.css" class="alternate-theme" title="color-5" disabled>
+    <link rel="stylesheet" href="assets/css/color-6.css" class="alternate-theme" title="color-6" disabled>
+    <link rel="stylesheet" href="assets/css/style-switcher.css">
 </head>
 
-<body>
+<body class="">
     <!-- Main Container -->
     <div class="main-container">
         <!-- Aside for nav -->
@@ -25,12 +34,12 @@
                 </span>
             </div>
             <ul class="nav">
-                <li><a href="#" class="active"><i class="fa fa-home"></i> Home</a></li>
-                <li><a href="#"><i class="fa fa-user"></i> About</a></li>
-                <li><a href="#"><i class="fa fa-list"></i> Skills</a></li>
-                <li><a href="#"><i class="fa-solid fa-chalkboard-user"></i> Expertise</a></li>
-                <li><a href="#"><i class="fa fa-briefcase"></i> Projects</a></li>
-                <li><a href="#"><i class="fa fa-comments"></i> Contact</a></li>
+                <li><a href="#home" class="active"><i class="fa fa-home"></i> Home</a></li>
+                <li><a href="#about"><i class="fa fa-user"></i> About</a></li>
+                <li><a href="#techskills"><i class="fa fa-list"></i> Skills</a></li>
+                <li><a href="#expertise"><i class="fa-solid fa-chalkboard-user"></i> Expertise</a></li>
+                <li><a href="#project"><i class="fa fa-briefcase"></i> Projects</a></li>
+                <li><a href="#contact"><i class="fa fa-comments"></i> Contact</a></li>
             </ul>
         </div>
         <!-- Aside end -->
@@ -38,11 +47,11 @@
         <div class="main-content">
             <!-- Home start -->
             <!-- <section class="home section"> -->
-            <section class="home section">
+            <section class="home section" id="home">
                 <div class="container">
                     <div class="row">
                         <div class="home-info padd-15">
-                            <h3 class="hello">Hello, my name is <span class="name">Siddhesh Shinde</span></h3>
+                            <h3 class="hello">Hello, my name is <span class="name"> Siddhesh Shinde</span></h3>
                             <h3 class="my-profession">I'm a <span class="typing">Software Engineer</span></h3>
                             <p>My expertise is in Web development, Data analytics and Machine Learning</p>
                             <div class="home-buttons">
@@ -60,7 +69,7 @@
             </section>
             <!-- Home end -->
             <!-- about start -->
-            <section class="about section">
+            <section class="about section" id="about">
                 <div class="container">
                     <div class="row">
                         <div class="section-title padd-15">
@@ -151,7 +160,7 @@
             </section>
             <!-- about end -->
             <!-- Technical Skills start -->
-            <section class="techskills section">
+            <section class="techskills section" id="techskills">
                 <div class="container">
                     <div class="row">
                         <div class="section-title padd-15">
@@ -347,7 +356,7 @@
             </section>
             <!-- Skills end -->
             <!-- Expertise start -->
-            <section class="expertise section">
+            <section class="expertise section" id="expertise">
                 <div class="container">
                     <div class="row">
                         <div class="section-title padd-15">
@@ -430,10 +439,8 @@
                 </div>
             </section>
             <!-- expertises end -->
-
             <!-- Projects start -->
-
-            <section class="project section">
+            <section class="project section" id="project">
                 <div class="container">
                     <div class="row">
                         <div class="section-title padd-15">
@@ -444,9 +451,8 @@
                         <!-- project item start -->
                         <div class="project-item padd-15">
                             <div class="project-item-inner shadow-dark">
-                                <div class="project-img">
-                                    <a class="project-img-link" href="https://github.com/Shenr0n/chirp-microblogging" target="_blank">
-                                        <img src="assets/img/chirp.jpg" alt="microblogging">
+                                <div class="project-img" onclick='openProject("https://github.com/Shenr0n/chirp-microblogging")'>
+                                    <img src="assets/img/chirp.jpg" alt="microblogging">
                                     <h3 class="project-name">Microblogging Social Media <i class="fa-solid fa-link"></i></h3>
                                     <div class="project-info padd-15">
                                         <ul>
@@ -459,7 +465,6 @@
                                             <li><div class="project-info-item">Tailwind CSS</div></li>
                                         </ul>
                                     </div>
-                                    </a>
                                 </div>
                             </div>
                         </div>
@@ -467,9 +472,8 @@
                         <!-- project item start -->
                         <div class="project-item padd-15">
                             <div class="project-item-inner shadow-dark">
-                                <div class="project-img">
-                                    <a class="project-img-link" href="https://github.com/Shenr0n/impact-of-us-elections-on-social-media" target="_blank">
-                                        <img src="assets/img/reddit.jpg" alt="microblogging">
+                                <div class="project-img" onclick='openProject("https://github.com/Shenr0n/impact-of-us-elections-on-social-media")'>
+                                    <img src="assets/img/reddit.jpg" alt="microblogging">
                                     <h3 class="project-name">Impact of US elections on Reddit <i class="fa-solid fa-link"></i></h3>
                                     <div class="project-info padd-15">
                                         <ul>
@@ -481,7 +485,6 @@
                                             <li><div class="project-info-item">VADER</div></li>
                                         </ul>
                                     </div>
-                                </a>
                                 </div>
                             </div>
                         </div>
@@ -489,9 +492,8 @@
                         <!-- project item start -->
                         <div class="project-item padd-15">
                             <div class="project-item-inner shadow-dark">
-                                <div class="project-img">
-                                    <a class="project-img-link" href="https://github.com/Shenr0n/quantum-error-correction-sho95" target="_blank">
-                                        <img src="assets/img/shor.jpg" alt="microblogging">
+                                <div class="project-img" onclick='openProject("https://github.com/Shenr0n/quantum-error-correction-sho95")'>
+                                    <img src="assets/img/shor.jpg" alt="microblogging">
                                     <h3 class="project-name">Quantum Error Correction <i class="fa-solid fa-link"></i></h3>
                                     <div class="project-info padd-15">
                                         <ul>
@@ -501,7 +503,6 @@
                                             <li><div class="project-info-item">Matplotlib</div></li>
                                         </ul>
                                     </div>
-                                </a>
                                 </div>
                             </div>
                         </div>
@@ -509,9 +510,8 @@
                         <!-- project item start -->
                         <div class="project-item padd-15">
                             <div class="project-item-inner shadow-dark">
-                                <div class="project-img">
-                                    <a class="project-img-link" href="https://github.com/Shenr0n/spring-employees-crud" target="_blank">
-                                        <img src="assets/img/employee.jpg" alt="microblogging">
+                                <div class="project-img" onclick='openProject("https://github.com/Shenr0n/spring-employees-crud")'>
+                                    <img src="assets/img/employee.jpg" alt="microblogging">
                                     <h3 class="project-name">Employee Management Web App <i class="fa-solid fa-link"></i></h3>
                                     <div class="project-info padd-15">
                                         <ul>
@@ -524,7 +524,6 @@
                                             <li><div class="project-info-item">Spring Security</div></li>
                                         </ul>
                                     </div>
-                                </a>
                                 </div>
                             </div>
                         </div>
@@ -532,9 +531,8 @@
                         <!-- project item start -->
                         <div class="project-item padd-15">
                             <div class="project-item-inner shadow-dark">
-                                <div class="project-img">
-                                    <a class="project-img-link" href="https://github.com/Shenr0n/cheminformatics-molecules" target="_blank">
-                                        <img src="assets/img/chem.jpg" alt="microblogging">
+                                <div class="project-img" onclick='openProject("https://github.com/Shenr0n/cheminformatics-molecules")'>
+                                    <img src="assets/img/chem.jpg" alt="microblogging">
                                     <h3 class="project-name">Cheminformatics of Molecules <i class="fa-solid fa-link"></i></h3>
                                     <div class="project-info padd-15">
                                         <ul>
@@ -545,7 +543,6 @@
                                             <li><div class="project-info-item">Mordred</div></li>
                                         </ul>
                                     </div>
-                                </a>
                                 </div>
                             </div>
                         </div>
@@ -553,9 +550,8 @@
                         <!-- project item start -->
                         <div class="project-item padd-15">
                             <div class="project-item-inner shadow-dark">
-                                <div class="project-img">
-                                    <a class="project-img-link" href="https://github.com/Shenr0n" target="_blank">
-                                        <img src="assets/img/crm.png" alt="microblogging">
+                                <div class="project-img" onclick='openProject("https://github.com/Shenr0n")'>
+                                    <img src="assets/img/crm.png" alt="microblogging">
                                     <h3 class="project-name">Customer Relationship Manager <i class="fa-solid fa-link"></i></h3>
                                     <div class="project-info padd-15">
                                         <ul>
@@ -566,7 +562,6 @@
                                             <li><div class="project-info-item">Postman</div></li>
                                         </ul>
                                     </div>
-                                </a>
                                 </div>
                             </div>
                         </div>
@@ -574,10 +569,78 @@
                     </div>
                 </div>
             </section>
-
             <!-- Projects end -->
+            <!-- Contact start -->
+            <section class="contact section" id="contact">
+                <div class="container">
+                    <div class="row">
+                        <div class="section-title padd-15">
+                            <h2>Contact Me</h2>
+                        </div>
+                    </div>
+                    <!-- <h3 class="contact-title">Any Questions?</h3> -->
+                    <h4 class="contact-title">Please reach out via email or phone for employment opportunities.</h4>
+                    <div class="row">
+                        <!-- contact info item start -->
+                        <div class="contact-info-item padd-15">
+                            <div class="icon"><i class="fa fa-envelope"></i></div>
+                            <h4>sidshinde314@gmail.com</h4>
+                        </div>
+                        <!-- contact info item end -->   
+                        <!-- contact info item start -->
+                        <div class="contact-info-item padd-15">
+                            <div class="icon"><i class="fa fa-phone"></i></div>
+                            <h4>(607) 313-0780</h4>
+                        </div>
+                        <!-- contact info item end -->
+                        <!-- contact info item start -->
+                        <div class="contact-info-item padd-15">
+                            <div class="icon"><i class="fa fa-location-dot"></i></div>
+                            <h4>New York</h4>
+                        </div>
+                        <!-- contact info item end -->
+                    </div>
+                    <h4 class="contact-title padd-15">Send me an Email:</h4>
 
-
+                    <!-- contact form --> 
+                    <div class="row">
+                        <div class="contact-form padd-15">
+                            <div class="row">
+                                <div class="form-item col-6 padd-15">
+                                    <div class="form-group">
+                                        <input type="name" class="form-control" placeholder="Name">
+                                    </div>
+                                </div>
+                                <div class="form-item col-6 padd-15">
+                                    <div class="form-group">
+                                        <input type="email" class="form-control" placeholder="Email">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="form-item col-12 padd-15">
+                                    <div class="form-group">
+                                        <input type="text" class="form-control" placeholder="Subject">
+                                    </div>
+                                </div>            
+                            </div>
+                            <div class="row">
+                                <div class="form-item col-12 padd-15">
+                                    <div class="form-group">
+                                        <textarea name="" class="form-control" id="" placeholder="Message"></textarea>
+                                    </div>
+                                </div>            
+                            </div>
+                            <div class="row">
+                                <div class="form-item col-12 padd-15">
+                                    <button type="submit" class="btn">Send Message</button>
+                                </div>            
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!-- Contact end -->
         </div>
         <!-- main content end -->
 
@@ -585,7 +648,28 @@
 
     <!-- Main end -->
 
-    <script src="assets/scripts/script.js"></script>
+    <!-- Toggle mode and theme start-->
+    <div class="style-switcher">
+        <div class="style-switcher-toggler s-icon">
+            <i class="fas fa-cog fa-spin"></i>
+        </div>
+        <div class="day-night s-icon">
+            <i class="fa-solid"></i>
+        </div>
+        <h4>Theme Colors</h4>
+        <div class="colors">
+            <span class="color-1" onclick="setActiveTheme('color-1')"></span>
+            <span class="color-2" onclick="setActiveTheme('color-2')"></span>
+            <span class="color-3" onclick="setActiveTheme('color-3')"></span>
+            <span class="color-4" onclick="setActiveTheme('color-4')"></span>
+            <span class="color-5" onclick="setActiveTheme('color-5')"></span>
+            <span class="color-6" onclick="setActiveTheme('color-6')"></span>
+        </div>
+    </div>
+    <!-- Toggle mode and theme end-->
+
+    <script src="assets/js/script.js"></script>
+    <script src="assets/js/style-switcher.js"></script>
 </body>
 
 </html>
