@@ -30,6 +30,8 @@ const nav = document.querySelector(".nav"),
         })
     }
 
+
+    
 const navTogglerBtn = document.querySelector(".nav-toggler"),
     aside = document.querySelector(".aside");
     navTogglerBtn.addEventListener("click", () =>{
@@ -39,3 +41,27 @@ const navTogglerBtn = document.querySelector(".nav-toggler"),
         aside.classList.toggle("open");
         navTogglerBtn.classList.toggle("open");
     }
+
+    function updateActiveNavItem() {
+        const sections = document.querySelectorAll("section");
+        let currentSectionIndex = 0;
+        let currentSectionPosition = sections[currentSectionIndex].offsetTop;
+    
+        sections.forEach((section, index) => {
+            const sectionTop = section.offsetTop;
+            if (window.scrollY >= sectionTop) {
+                currentSectionIndex = index;
+                currentSectionPosition = sectionTop;
+            }
+        });
+    
+        navList.forEach((navItem, index) => {
+            if (index === currentSectionIndex) {
+                navItem.querySelector("a").classList.add("active");
+            } else {
+                navItem.querySelector("a").classList.remove("active");
+            }
+        });
+    }
+    
+    window.addEventListener("scroll", updateActiveNavItem);
